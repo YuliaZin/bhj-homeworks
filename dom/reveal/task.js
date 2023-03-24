@@ -17,7 +17,7 @@ function isVisible(el) {
 for (let item of reveal) {
     document.addEventListener("scroll", () => {
         if (isVisible(item)){
-            item.className = 'reveal_active'
+            item.className = 'reveal reveal_active'
         } else
             item.className = 'reveal'
     })
