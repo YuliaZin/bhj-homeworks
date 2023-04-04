@@ -1,11 +1,13 @@
-let arrayTooltiips = Array.from(document.querySelectorAll(".has-tooltip"));
+let arrOfTooltips = Array.from(document.querySelectorAll(".has-tooltip"));
 let tooltip = document.createElement("div");
 tooltip.setAttribute("data-position", "bottom");
 
-arrayOfTooltiips.forEach((item) => {
+arrOfTooltips.forEach((item) => {
     tooltip.className = "tooltip";
+    
 
     item.onclick = () => {
+        
         tooltip.className = "tooltip tooltip_active";
         tooltip.textContent = item.title;
         tooltip.style.top = item.getBoundingClientRect().top + item.getBoundingClientRect().height + "px";
